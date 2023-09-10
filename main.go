@@ -43,6 +43,7 @@ func main() {
 	opts.SetClientID("go_mqtt_client_1")
 	opts.SetUsername("mosquitto_1")
 	opts.SetPassword("public")
+	opts.SetKeepAlive(50000)
 	opts.SetDefaultPublishHandler(messagePubHandler)
 	opts.OnConnect = connectHandler
 	opts.OnConnectionLost = connectLostHandler
